@@ -1,0 +1,13 @@
+@import '~bootstrap/scss/bootstrap';
+
+
+.container-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+
+    .card {
+        width: calc(100% / 4 - 20px / 3 * 4);
+    }
+}

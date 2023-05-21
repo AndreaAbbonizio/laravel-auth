@@ -6,7 +6,7 @@
         <h1 class="mb-3">Benvenuto nella tua dashboard</h1>
 
         <div class="container-links">
-            <a href="{{route('admin.projects.index')}}">Link per acceddere ai tuoi progetti personali</a>
+            <a href="{{route('admin.projects.index')}}">Link per accedere ai tuoi progetti personali</a>
         </div>
     </div>
 @endsection

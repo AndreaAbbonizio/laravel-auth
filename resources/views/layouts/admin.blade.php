@@ -8,12 +8,13 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Boolfolio</title>
 
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Usando Vite -->
     @vite(['resources/js/app.js'])
@@ -46,6 +47,12 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{url('/') }}">{{ __('Home') }}</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route('admin.')}}">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route('admin.projects.index')}}">Projects</a>
+                        </li> 
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -85,10 +92,25 @@
             </div>
         </nav>
 
-        <main class="container">
+        <main>
             @yield('content')
         </main>
+
+        <footer class="py-3 bg-dark">
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+              <li class="nav-item"><a href="{{route('welcome')}} " class="nav-link px-2 text-muted">Home</a></li>
+              <li class="nav-item"><a href="{{route('admin.')}}" class="nav-link px-2 text-muted">Dashboard</a></li>
+              <li class="nav-item"><a href="{{route('admin.projects.index')}}" class="nav-link px-2 text-muted">Projects</a></li>
+              
+            </ul>
+
+            <p class="text-center text-muted">&copy; 2021 Company, Inc</p>
+        </footer>
+
     </div>
+
+
+    @yield('script')
 </body>
 
 </html>

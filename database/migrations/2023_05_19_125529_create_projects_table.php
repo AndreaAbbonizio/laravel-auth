@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('link_repository');
             $table->string('link_image')->nullable();
             $table->string('developers');
-            $table->string('slug')->nullable();
+            $table->string('slug');
 
             $table->timestamps();
         });
